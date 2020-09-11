@@ -14,11 +14,11 @@ The current (temporary) build guide and a build log is available here: [SofleKey
 
 Make example for this keyboard (after setting up your build environment):
 
-    make sofle:default
+    make poggers:default2
 
 Flash the default keymap: 
 
-    make sofle:default:avrdude
+    make poggers:default2:avrdude
 
 Press reset button on he keyboard when asked.
 
