@@ -1,5 +1,5 @@
 #pragma once
 
 #ifdef KEYBOARD_sofle_rev1
-    #include "rev1.h"
+    #include "rev0.h"
 #endif
