@@ -11,11 +11,31 @@
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 10
-#define MATRIX_COLS 6
+#define MATRIX_COLS 8
 
-// wiring of each half
-#define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
+/*
+ * Keyboard Matrix Assignments
+ *
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
+ */
+// D6 mentioned twice because PHANTOM ROW
+#define MATRIX_ROW_PINS { D9, D8, D7, D6, D6 }
+#define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5, F5 }
+#define MATRIX_ROW_PINS_RIGHT { D9, D8, D7, D6, D5 }
+#define MATRIX_COL_PINS_RIGHT { B6, B2, B3, B1, F7, F6, F5, F4 }
+
+#define ENCODERS_PAD_A { D4 }
+#define ENCODERS_PAD_B { D5 }
+#define ENCODER_RESOLUTION 2
+
+// #define UNUSED_PINS
+
+/* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
 #define TAPPING_TERM 100
