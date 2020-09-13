@@ -24,9 +24,9 @@
  *
  */
 // D6 mentioned twice because PHANTOM ROW
-#define MATRIX_ROW_PINS { D9, D8, D7, D6, D6 }
+#define MATRIX_ROW_PINS { B5, B4, D7, D6, D6 }
 #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5, F5 }
-#define MATRIX_ROW_PINS_RIGHT { D9, D8, D7, D6, D5 }
+#define MATRIX_ROW_PINS_RIGHT { B5, B4, D7, D6, D5 }
 #define MATRIX_COL_PINS_RIGHT { B6, B2, B3, B1, F7, F6, F5, F4 }
 
 #define ENCODERS_PAD_A { D4 }
@@ -36,17 +36,10 @@
 // #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL//COL2ROW
 
 #define TAPPING_TERM 100
 #define DEBOUNCE 5
-
-/* encoder support */
-#define ENCODERS_PAD_A { F5 }
-#define ENCODERS_PAD_B { F4 }
-#define ENCODERS_PAD_A_RIGHT { F4 }
-#define ENCODERS_PAD_B_RIGHT { F5 }
-#define ENCODER_RESOLUTION 2
 
 #define TAP_CODE_DELAY 10
 
