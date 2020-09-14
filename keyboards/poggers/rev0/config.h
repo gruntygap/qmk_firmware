@@ -24,13 +24,13 @@
  *
  */
 // D6 mentioned twice because PHANTOM ROW
-#define MATRIX_ROW_PINS { B5, B4, D7, D6, D6 }
+#define MATRIX_ROW_PINS { B5, B4, E6, D7, F4 }
 #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5, F5 }
-#define MATRIX_ROW_PINS_RIGHT { B5, B4, D7, D6, D5 }
+#define MATRIX_ROW_PINS_RIGHT { B5, B4, E6, D7, C6 }
 #define MATRIX_COL_PINS_RIGHT { B6, B2, B3, B1, F7, F6, F5, F4 }
 
 #define ENCODERS_PAD_A { D4 }
-#define ENCODERS_PAD_B { D5 }
+#define ENCODERS_PAD_B { C6 }
 #define ENCODER_RESOLUTION 2
 
 // #define UNUSED_PINS
@@ -49,3 +49,4 @@
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
+#define MASTER_RIGHT
