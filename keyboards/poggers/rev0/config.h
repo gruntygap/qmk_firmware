@@ -49,4 +49,4 @@
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
-#define MASTER_RIGHT
+#define EE_HANDS
