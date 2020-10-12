@@ -12,9 +12,9 @@ L30, L31, L32, L33, L34, L35, L36, XXX,     K30, K31, K32, K33, XXX, K35, K36, K
 XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX,     XXX, XXX, XXX, K43, XXX, K45, K46, XXX  */
 
 #define LAYOUT( \
-    K00, K01, K02, K03, K04, K05, K06, K07 \
+        K00, K01, K02, K03, K04, K05, K06, K07 \
     ) \
     { \
-        { K00, K01, K02, K03, K04, K05, K06, K07 }, \
+        { K00, K01, K02, K03, K04, K05, K06, K07 } \
     }
 

@@ -13,6 +13,8 @@
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 8
 
+#define MATRIX_HAS_GHOST
+
 /*
  * Keyboard Matrix Assignments
  *
