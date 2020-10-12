@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [_QWERTY] = LAYOUT( \
-  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_1,  KC_SLSH,    KC_RSFT,    KC_1 \
+  KC_N \
 ),
 /*
  * COLEMAK
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [_COLEMAK] = LAYOUT( \
-  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1 \
+  KC_N \
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1 \
+  KC_N \
 ),
 /* RAISE
  * ,----------------------------------------.                    ,-----------------------------------------.
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT( \
-  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1 \
+  KC_N \
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT( \
-  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1 \
+  KC_N \
 ),
 };
 
