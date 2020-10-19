@@ -28,15 +28,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,   KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_NO,      KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,KC_EQL,     KC_BSLS,    KC_GRV, \
   KC_TAB,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_SPC, KC_NO,      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC,    KC_RBRC,    KC_BSPC, \
   KC_LCTRL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_LCMD,KC_NO,      KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,    KC_NO,      KC_ENT, \
-  KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LOPT,KC_NO,      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1, \
+  KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LOPT,KC_NO,      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_FUNCTION, \
   KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_MUTE,KC_NO,      KC_NO,  KC_NO,  KC_NO,  KC_SPC, KC_NO,  KC_RCMD,    KC_ROPT,    KC_NO \
 ),
 
+// Use either KC_TRANSPARENT, KC_TRNS, or _______
+// https://hhkeyboard.us/wp-content/uploads/2018/11/HHKB-Settings_and_Layout-1.pdf
+// TODO: get transparent keys into the function layer
+// TODO: allow mouse keys enable
+// TODO: ensure capslock works
+
 [_FUNCTION] = LAYOUT( \
-  KC_ESC,   KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_NO,      KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS,KC_EQL,     KC_BSLS,    KC_GRV, \
-  KC_TAB,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_SPC, KC_NO,      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC,    KC_RBRC,    KC_BSPC, \
-  KC_LCTRL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_LCMD,KC_NO,      KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,    KC_NO,      KC_ENT, \
-  KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LOPT,KC_NO,      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_NO,  KC_SLSH,    KC_RSFT,    KC_1, \
+  KC_ESC,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_NO,      KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12,     KC_INS,     KC_DEL, \
+  KC_CAPS,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_SPC, KC_NO,      KC_Y,   KC_U,   KC_PSCR,KC_SLCK,KC_PAUS,KC_UP,      KC_RBRC,    KC_BSPC, \
+  KC_LCTRL, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_LCMD,KC_NO,      KC_H,   KC_J,   KC_HOME,KC_PGUP,KC_LEFT,KC_RGHT,    KC_NO,      KC_ENT, \
+  KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LOPT,KC_NO,      KC_N,   KC_M,   KC_END, KC_PGDN,KC_NO,  KC_DOWN,    KC_RSFT,    KC_1, \
   KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_MUTE,KC_NO,      KC_NO,  KC_NO,  KC_NO,  KC_SPC, KC_NO,  KC_RCMD,    KC_ROPT,    KC_NO \
 ),
 
@@ -93,7 +99,7 @@ static void print_status_narrow(void) {
             oled_write_ln_P(PSTR("Qwrt"), false);
             break;
         case _FUNCTION:
-            oled_write_ln_P(PSTR("Clmk"), false);
+            oled_write_ln_P(PSTR("Fnc"), false);
             break;
         default:
             oled_write_P(PSTR("Undef"), false);
@@ -149,25 +155,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case KC_FUNCTION:
             if (record->event.pressed) {
-                set_single_persistent_default_layer(_FUNCTION);
-            }
-            return false;
-        case KC_FUNCTION:
-            if (record->event.pressed) {
-                layer_on(_LOWER);
-                update_tri_layer(_LOWER, _RAISE, _ADJUST);
+                layer_on(_FUNCTION);
             } else {
-                layer_off(_LOWER);
-                update_tri_layer(_LOWER, _RAISE, _ADJUST);
-            }
-            return false;
-        case KC_RAISE:
-            if (record->event.pressed) {
-                layer_on(_RAISE);
-                update_tri_layer(_LOWER, _RAISE, _ADJUST);
-            } else {
-                layer_off(_RAISE);
-                update_tri_layer(_LOWER, _RAISE, _ADJUST);
+                layer_off(_FUNCTION);
             }
             return false;
         case KC_ADJUST:
