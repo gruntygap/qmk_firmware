@@ -52,4 +52,3 @@
 #define NO_ACTION_FUNCTION
 
 #define EE_HANDS
-#define MASTER_RIGHT
