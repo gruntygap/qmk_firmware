@@ -62,15 +62,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_VOLD, KC_VOLU,                           KC_VOLD, KC_VOLU
     ),
     [_MOUSE] = LAYOUT_split_3x5_2(
-        KC_ACL0, KC_NO, KC_BTN4, KC_BTN5, KC_NO,    KC_ACL0, KC_BTN4, KC_BTN1, KC_BTN2, KC_BTN5,
-        KC_ACL1, KC_NO, KC_BTN2, KC_BTN1, KC_NO,    KC_ACL1, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,
-        KC_ACL2, KC_NO, KC_NO, KC_NO, KC_NO,        KC_ACL2, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,
+        MS_ACL0, KC_NO, MS_BTN4, MS_BTN5, KC_NO,    MS_ACL0, MS_BTN4, MS_BTN1, MS_BTN2, MS_BTN5,
+        MS_ACL1, KC_NO, MS_BTN2, MS_BTN1, KC_NO,    MS_ACL1, MS_LEFT, MS_DOWN, MS_UP,   MS_RGHT,
+        MS_ACL2, KC_NO, KC_NO, KC_NO, KC_NO,        MS_ACL2, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR,
         TO(_QWERTY), TO(_QWERTY),                   TO(_QWERTY), TO(_QWERTY)
     ),
     [_PAD] = LAYOUT_split_3x5_2(
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,          KC_PSLS, KC_P7, KC_P8, KC_P9, KC_PMNS,
-        KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI,         KC_NUM, KC_PAST, KC_P4, KC_P5, KC_P6,
-        KC_PPLS, KC_TRNS, KC_NO, KC_NO, KC_NO,      KC_NO, KC_PDOT, KC_P1, KC_P2, KC_P3, KC_EQL,
+        KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI, KC_NUM,  KC_PAST, KC_P4, KC_P5, KC_P6, KC_PPLS,
+        KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO,        KC_PDOT, KC_P1, KC_P2, KC_P3, KC_EQL,
         TO(_QWERTY), TO(_QWERTY),                   KC_PENT, KC_P0
     ),
     [_FN] = LAYOUT_split_3x5_2(
