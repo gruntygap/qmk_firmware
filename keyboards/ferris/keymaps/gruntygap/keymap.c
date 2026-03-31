@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUM] = LAYOUT_split_3x5_2(
         KC_1, KC_2, KC_3, KC_4, KC_5,                       KC_6, KC_7, KC_8, KC_9, KC_0,
         KC_DEL, KC_CAPS, KC_PSCR, KC_INS, KC_TAB,          KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
-        TO(_PAD), TO(_FN), TO(_GAME), KC_TAB, KC_TAB,     KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
+        KC_TAB, CW_TOGG, TO(_PAD), TO(_FN), TO(_GAME),     KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
         LT(_COMBO,KC_TAB), KC_TRNS,                          KC_NO, KC_NO
     ),
     [_GAME] = LAYOUT_split_3x5_2(
